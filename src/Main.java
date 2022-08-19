@@ -22,9 +22,9 @@ public class Main {
 
         //задача 2
         int maxSpent = -1;
-        int minSpent = 200000;
+        int minSpent = Integer.MAX_VALUE;
         int[] secondArr = generateRandomArray();
-        for (int i = 0; i < secondArr.length; i++) {
+        for (int i = 0; i <= secondArr.length - 1; i++) {
             if (secondArr[i] > maxSpent) {
                 maxSpent = secondArr[i];
             }
@@ -40,8 +40,8 @@ public class Main {
         double averageSpent = 0;
         double spentOverall = 0;
         int[] thirdArr = generateRandomArray();
-        for (int i = 0; i < thirdArr.length; i++) {
-            spentOverall += thirdArr[i];
+        for (int j : thirdArr) {
+            spentOverall += j;
         }
         averageSpent = spentOverall / 30;
         System.out.println("Средняя сумма трат за месяц составила " + averageSpent + " рублей");
@@ -49,8 +49,6 @@ public class Main {
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
-
         }
-        }
-
+    }
 }
